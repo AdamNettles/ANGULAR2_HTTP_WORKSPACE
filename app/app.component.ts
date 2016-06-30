@@ -8,6 +8,7 @@ import { HeroListPromiseComponent } from './toh/hero-list.component.promise';
 
 import { WikiComponent }      from './wiki/wiki.component';
 import { WikiSmartComponent } from './wiki/wiki-smart.component';
+import { Adam } from './adam/adam';
 
 @Component({
   selector: 'my-app',
@@ -17,9 +18,11 @@ import { WikiSmartComponent } from './wiki/wiki-smart.component';
 /*
   providers: [ HTTP_PROVIDERS ]
 */
-  directives: [  ]
+  directives: [ Adam ]
 })
-export class AppComponent { }
+export class AppComponent {
+
+}
 
 
 /*

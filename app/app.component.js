@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 // Add the RxJS Observable operators we need in this app.
 require('./rxjs-operators');
+var adam_1 = require('./adam/adam');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -21,7 +22,7 @@ var AppComponent = (function () {
             /*
               providers: [ HTTP_PROVIDERS ]
             */
-            directives: []
+            directives: [adam_1.Adam]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
