@@ -19,18 +19,20 @@ var AdamService = (function () {
     }
     AdamService.prototype.getThatThing = function () {
         console.info('AdamService getThatThing()');
-        var result = this.http.get(this.adamUrl)
-            .catch(this.handleError);
+        var result = this.http.get(this.adamUrl).catch(this.handleError);
+        console.info('AdamService here comes the result');
         console.info(result);
         return result;
     };
     AdamService.prototype.extractData = function (res) {
+        console.info('adamService extractData()');
         var body = res.json();
         return body.data || {};
     };
     AdamService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure
         // We'd also dig deeper into the error to get a better message
+        console.info('adamService handleError()');
         var errMsg = (error.message) ? error.message :
             error.status ? error.status + " - " + error.statusText : 'Server error';
         console.error(errMsg); // log to console instead

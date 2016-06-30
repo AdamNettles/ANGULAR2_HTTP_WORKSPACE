@@ -23,8 +23,7 @@ var Adam = (function () {
     };
     Adam.prototype.getThatThing = function () {
         console.info('Adam getThatThing()');
-        this.adamService.getThatThing()
-            .subscribe();
+        this.adamService.getThatThing();
     };
     Adam = __decorate([
         core_1.Component({

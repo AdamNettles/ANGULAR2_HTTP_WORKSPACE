@@ -10,16 +10,16 @@ export class AdamService {
 
   private adamUrl = 'http://jsonplaceholder.typicode.com/posts/1';  // URL to web API
 
-  getThatThing () {
+  getThatThing (): Observable<string>{
     console.info('AdamService getThatThing()');
-    var result = this.http.get(this.adamUrl)
-                    // .map(this.extractData)
-                    .catch(this.handleError);
+    var result = this.http.get(this.adamUrl).catch(this.handleError);
+    console.info('AdamService here comes the result');
     console.info(result);
     return result;
   }
 
   private extractData(res: Response) {
+    console.info('adamService extractData()');
     let body = res.json();
     return body.data || { };
   }
@@ -27,6 +27,7 @@ export class AdamService {
   private handleError (error: any) {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
+    console.info('adamService handleError()');
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead

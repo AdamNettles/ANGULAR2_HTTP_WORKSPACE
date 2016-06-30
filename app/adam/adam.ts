@@ -23,11 +23,7 @@ export class Adam implements OnInit {
 
   getThatThing() {
     console.info('Adam getThatThing()');
-    this.adamService.getThatThing()
-                     .subscribe(
-                      //  result  => this.result.push(hero),
-                      //  error =>  this.errorMessage = <any>error);
-                     );
+    this.adamService.getThatThing();
   }
 }
 
